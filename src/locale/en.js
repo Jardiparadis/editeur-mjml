@@ -28,6 +28,8 @@ export default {
         twoColumn: '2 Columns',
         threeColumn: '3 Columns',
         fourColumn: '4 Columns',
+        '2/3-1/3Column': '2/3 1/3 Columns',
+        '1/3-2/3Column': '1/3 2/3 Columns',
         divider: 'Divider',
         group: 'Group',
         hero: 'Hero',
