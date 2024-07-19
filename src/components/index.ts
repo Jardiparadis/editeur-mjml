@@ -5,7 +5,6 @@ import loadHead from './Head';
 import loadStyle from './Style';
 import loadFont from './Font';
 import loadBody from './Body';
-import loadWrapper from './Wrapper';
 import loadSection from './Section';
 import loadGroup from './Group';
 import loadColumn from './Column';
@@ -19,7 +18,6 @@ import loadSpacer from './Spacer';
 import loadNavBar from './NavBar';
 import loadNavBarLink from './NavBarLink';
 import loadHero from './Hero';
-import loadRaw from './Raw';
 import { RequiredPluginOptions } from '..';
 
 export default (editor: Editor, opt: RequiredPluginOptions) => {
@@ -288,7 +286,6 @@ export default (editor: Editor, opt: RequiredPluginOptions) => {
     loadStyle,
     loadFont,
     loadBody,
-    loadWrapper,
     loadSection,
     loadGroup,
     loadColumn,
@@ -302,7 +299,6 @@ export default (editor: Editor, opt: RequiredPluginOptions) => {
     loadNavBar,
     loadNavBarLink,
     loadHero,
-    loadRaw,
   ]
   .forEach(module => module(editor, compOpts));
 };

@@ -2,7 +2,6 @@
 import type { Editor } from 'grapesjs';
 import { componentsToQuery, getName, isComponentType } from './utils';
 import { type as typeBody } from './Body';
-import { type as typeWrapper } from './Wrapper';
 import { type as typeColumn } from './Column';
 import { type as typeGroup } from './Group';
 
@@ -16,7 +15,7 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
       ...coreMjmlModel,
       defaults: {
         name: getName(editor, 'section'),
-        draggable: componentsToQuery([typeBody, typeWrapper]),
+        draggable: componentsToQuery([typeBody]),
         droppable: componentsToQuery([typeColumn, typeGroup]),
         'style-default': {
           'padding-left': '0px',

@@ -1,9 +1,7 @@
 // Specs: https://documentation.mjml.io/#mj-body
 import type { Editor } from 'grapesjs';
 import { type as typeHero } from './Hero';
-import { type as typeRaw } from './Raw';
 import { type as typeSection } from './Section';
-import { type as typeWrapper } from './Wrapper';
 import { componentsToQuery, getName, isComponentType } from './utils';
 
 export const type = 'mj-body';
@@ -15,7 +13,7 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
       ...coreMjmlModel,
       defaults: {
         name: getName(editor, 'body'),
-        droppable: componentsToQuery([typeSection, typeWrapper, typeHero, typeRaw]),
+        droppable: componentsToQuery([typeSection, typeHero]),
         draggable: false,
         copyable: false,
         removable: false,
@@ -53,7 +51,7 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
       rerender() {
         coreMjmlView.rerender.call(this);
         this.model.components().models.forEach((item: any) => {
-          if ([typeSection, typeRaw].indexOf(item.attributes.type) < 0) {
+          if ([typeSection].indexOf(item.attributes.type) < 0) {
             return;
           }
           item.view.rerender();
