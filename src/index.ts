@@ -123,7 +123,7 @@ export type RequiredPluginOptions = Required<PluginOptions>;
 const plugin: Plugin<PluginOptions> = (editor, opt = {}) => {
   const opts: RequiredPluginOptions = {
     blocks: [
-      'mj-1-column', 'mj-2-columns', 'mj-3-columns', 'mj-text', 'mj-button', 'mj-image', 'mj-divider', 'mj-social-group',
+      'mj-1-column', 'mj-2-columns', 'mj-3-columns', 'mj-4-columns', 'mj-text', 'mj-button', 'mj-image', 'mj-divider', 'mj-social-group',
       'mj-social-element', 'mj-spacer', 'mj-navbar', 'mj-navbar-link', 'mj-hero'
     ],
     block: () => ({}),

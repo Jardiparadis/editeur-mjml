@@ -27,6 +27,7 @@ export default {
         oneColumn: '1 Column',
         twoColumn: '2 Columns',
         threeColumn: '3 Columns',
+        fourColumn: '4 Columns',
         divider: 'Divider',
         group: 'Group',
         hero: 'Hero',
