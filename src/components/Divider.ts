@@ -27,7 +27,7 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
         },
         stylable: [
           'padding', 'padding-top', 'padding-left', 'padding-right', 'padding-bottom',
-          'width', 'container-background-color',
+          'width', 'container-background-color', 'align-divider',
           'border-detached', 'border-width', 'border-style', 'border-color'
         ],
         void: false,
