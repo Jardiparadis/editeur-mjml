@@ -25,6 +25,8 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
           'border', 'border-width', 'border-style', 'border-color',
           'border-top', 'border-width-top', 'border-style-top', 'border-color-top',
           'border-bottom', 'border-width-bottom', 'border-style-bottom', 'border-color-bottom',
+          'border-left', 'border-width-left', 'border-style-left', 'border-color-left',
+          'border-right', 'border-width-right', 'border-style-right', 'border-color-right',
           'container-background-color', 'align', 'alt', 'fluid-on-mobile', 'href',
           'name', 'target', 'title'
         ],
