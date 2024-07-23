@@ -22,6 +22,7 @@ export default (editor:  Editor, { coreMjmlModel, coreMjmlView }: any) => {
           'text-decoration', 'align', 'text-align',
           'vertical-align', 'text-transform',
           'padding', 'padding-top', 'padding-left', 'padding-right', 'padding-bottom',
+          'inner-padding', 'inner-padding-top', 'inner-padding-left', 'inner-padding-right', 'inner-padding-bottom',
           'border-radius', 'border-top-left-radius', 'border-top-right-radius', 'border-bottom-left-radius', 'border-bottom-right-radius',
           'border', 'border-width', 'border-style', 'border-color', 'line-height', 'letter-spacing',
           'title', 'href'
