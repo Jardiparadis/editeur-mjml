@@ -23,7 +23,8 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
           'padding', 'padding-top', 'padding-left', 'padding-right', 'padding-bottom',
           'border-radius', 'border-top-left-radius', 'border-top-right-radius', 'border-bottom-left-radius', 'border-bottom-right-radius',
           'border', 'border-width', 'border-style', 'border-color',
-          'container-background-color', 'align',
+          'container-background-color', 'align', 'alt', 'fluid-on-mobile', 'href',
+          'name', 'target', 'title'
         ],
         'style-default': {
           'padding-top': '10px',

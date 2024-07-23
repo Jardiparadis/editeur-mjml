@@ -17,7 +17,10 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
         draggable: componentsToQuery([typeColumn, typeHero]),
         droppable: false,
         'style-default': { height: '20px' },
-        stylable: ['height', 'container-background-color'],
+        stylable: [
+          'height', 'container-background-color',
+          'padding', 'padding-top', 'padding-left', 'padding-right', 'padding-bottom',
+        ],
         void: false,
       },
     },
