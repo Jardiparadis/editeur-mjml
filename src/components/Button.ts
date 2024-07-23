@@ -25,7 +25,7 @@ export default (editor:  Editor, { coreMjmlModel, coreMjmlView }: any) => {
           'inner-padding', 'inner-padding-top', 'inner-padding-left', 'inner-padding-right', 'inner-padding-bottom',
           'border-radius', 'border-top-left-radius', 'border-top-right-radius', 'border-bottom-left-radius', 'border-bottom-right-radius',
           'border', 'border-width', 'border-style', 'border-color', 'line-height', 'letter-spacing',
-          'title', 'href'
+          'title', 'href', 'target'
         ],
         'style-default': {
           'background-color': '#414141',
