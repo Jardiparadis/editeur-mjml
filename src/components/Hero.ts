@@ -24,7 +24,8 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
         stylable: [
           'background-color', 'background-height', 'background-position', 'background-url',
           'background-width', 'css-class', 'height', 'mode', 'padding', 'padding-top',
-          'padding-left', 'padding-right', 'padding-bottom', 'vertical-align', 'width'
+          'padding-left', 'padding-right', 'padding-bottom', 'vertical-align', 'width',
+          'border-radius'
         ],
         'style-default': {
           'vertical-align': 'top'
