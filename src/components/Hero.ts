@@ -25,7 +25,7 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
           'background-color', 'background-height', 'background-position', 'background-url',
           'background-width', 'css-class', 'height', 'mode', 'padding', 'padding-top',
           'padding-left', 'padding-right', 'padding-bottom', 'vertical-align', 'width',
-          'border-radius'
+          'border-radius', 'background-position-height', 'background-position-width'
         ],
         'style-default': {
           'vertical-align': 'top'
