@@ -27,8 +27,8 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
           'border-bottom', 'border-width-bottom', 'border-style-bottom', 'border-color-bottom',
           'border-left', 'border-width-left', 'border-style-left', 'border-color-left',
           'border-right', 'border-width-right', 'border-style-right', 'border-color-right',
-          'container-background-color', 'align', 'alt', 'fluid-on-mobile', 'href',
-          'name', 'target', 'title'
+          'container-background-color', 'align', 'fluid-on-mobile',
+          'name', 'target'
         ],
         'style-default': {
           'padding-top': '10px',
@@ -37,7 +37,7 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
           'padding-left': '25px',
           'align': 'center',
         },
-        traits: ['href', 'rel', 'alt', 'title'],
+        traits: ['href', 'rel', 'alt', 'title', 'name'],
         void: false,
       },
     },

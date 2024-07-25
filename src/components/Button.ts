@@ -25,7 +25,7 @@ export default (editor:  Editor, { coreMjmlModel, coreMjmlView }: any) => {
           'inner-padding', 'inner-padding-top', 'inner-padding-left', 'inner-padding-right', 'inner-padding-bottom',
           'border-radius', 'border-top-left-radius', 'border-top-right-radius', 'border-bottom-left-radius', 'border-bottom-right-radius',
           'border', 'border-width', 'border-style', 'border-color', 'line-height', 'letter-spacing',
-          'title', 'href', 'target'
+          'title',
         ],
         'style-default': {
           'background-color': '#414141',
@@ -40,7 +40,22 @@ export default (editor:  Editor, { coreMjmlModel, coreMjmlView }: any) => {
           'padding-left': '25px',
           'align': 'center',
         },
-        traits: ['href'],
+        traits: [
+          'href',
+          {
+            id: 'target',
+            type: 'select',
+            label: 'Target',
+            name: 'target',
+            default: '_blank',
+            options: [
+              { id: '_blank', label: 'Blank' },
+              { id: '_self', label: 'Self' },
+              { id: '_parent', label: 'Parent' },
+              { id: '_top', label: 'Top' },
+            ],
+          }
+        ],
         // 'container-background-color', 'inner-padding'
       },
     },
