@@ -184,4 +184,42 @@ export default (editor: Editor, opts: RequiredPluginOptions) => {
     </mj-hero>`,
   });
 
+  addBlock('mj-wrapper', {
+    label: getI18nLabel('wrapper'),
+    media: `<svg viewBox="0 0 24 24">
+        <path fill="currentColor" d="M18 2H6C4.89 2 4 2.9 4 4V20C4 21.11 4.89 22 6 22H18C19.11 22 20 21.11 20 20V4C20 2.9 19.11 2 18 2M18 20H6V16H18V20M18 8H6V4H18V8Z" />
+    </svg>`,
+    content: `<mj-wrapper border="1px solid #000000" padding="50px 30px">
+      <mj-section border-top="1px solid #aaaaaa" border-left="1px solid #aaaaaa" border-right="1px solid #aaaaaa" padding="20px">
+        <mj-column>
+          <mj-image padding="0" src="${imagePlaceholderSrc}" />
+        </mj-column>
+      </mj-section>
+      <mj-section border-left="1px solid #aaaaaa" border-right="1px solid #aaaaaa" padding="20px" border-bottom="1px solid #aaaaaa">
+        <mj-column border="1px solid #dddddd">
+          <mj-text padding="20px"> First line of text </mj-text>
+          <mj-divider border-width="1px" border-style="dashed" border-color="lightgrey" padding="0 20px" />
+          <mj-text padding="20px"> Second line of text </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>`,
+  });
+
+  addBlock('mj-raw', {
+    label: getI18nLabel('raw'),
+    media: `<svg viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12,17.56L16.07,16.43L16.62,10.33H9.38L9.2,8.3H16.8L17,6.31H7L7.56,12.32H14.45L14.22,14.9L12,15.5L9.78,14.9L9.64,13.24H7.64L7.93,16.43L12,17.56M4.07,3H19.93L18.5,19.2L12,21L5.5,19.2L4.07,3Z" />
+    </svg>`,
+    content: `<mj-raw>
+      <div class="container">
+        <img class="item" src="https://source.unsplash.com/random/200x141" alt="Example image">
+        <img class="item" src="https://source.unsplash.com/random/200x142" alt="Example image">
+        <img class="item" src="https://source.unsplash.com/random/200x143" alt="Example image">
+        <img class="item" src="https://source.unsplash.com/random/200x144" alt="Example image">
+        <img class="item" src="https://source.unsplash.com/random/200x145" alt="Example image">
+        <img class="item" src="https://source.unsplash.com/random/200x146" alt="Example image">
+      </div>
+    </mj-raw>`,
+  });
+
 };

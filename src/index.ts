@@ -125,7 +125,7 @@ const plugin: Plugin<PluginOptions> = (editor, opt = {}) => {
     blocks: [
       'mj-1-column', 'mj-2-columns', 'mj-3-columns', 'mj-4-columns', 'mj-1/3-2/3-columns', 'mj-2/3-1/3-columns',
       'mj-text', 'mj-button', 'mj-image', 'mj-divider', 'mj-social-group',
-      'mj-social-element', 'mj-spacer', 'mj-navbar', 'mj-navbar-link', 'mj-hero'
+      'mj-social-element', 'mj-spacer', 'mj-navbar', 'mj-navbar-link', 'mj-hero', 'mj-wrapper', 'mj-raw'
     ],
     block: () => ({}),
     codeViewerTheme: 'hopscotch',
