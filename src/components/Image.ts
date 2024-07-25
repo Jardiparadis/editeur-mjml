@@ -27,8 +27,7 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
           'border-bottom', 'border-width-bottom', 'border-style-bottom', 'border-color-bottom',
           'border-left', 'border-width-left', 'border-style-left', 'border-color-left',
           'border-right', 'border-width-right', 'border-style-right', 'border-color-right',
-          'container-background-color', 'align', 'fluid-on-mobile',
-          'name', 'target'
+          'container-background-color', 'align', 'name', 'target'
         ],
         'style-default': {
           'padding-top': '10px',
@@ -37,7 +36,20 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
           'padding-left': '25px',
           'align': 'center',
         },
-        traits: ['href', 'rel', 'alt', 'title', 'name'],
+        traits: [
+          'href',
+          'rel',
+          'alt',
+          'title',
+          'name',
+          {
+            type: 'checkbox',
+            label: 'Fluid on mobile',
+            name: 'fluid-on-mobile',
+            valueTrue: 'true', //TODO should be boolean but follows the rules in Editeur:Checkbox.vue l6
+            valueFalse: 'false',
+          }
+        ],
         void: false,
       },
     },
