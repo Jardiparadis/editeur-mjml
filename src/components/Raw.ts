@@ -9,6 +9,7 @@ export const type = 'mj-raw';
 export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
     editor.Components.addType(type, {
         isComponent: isComponentType(type),
+        extendFnView: ['onActive'],
         model: {
             ...coreMjmlModel,
             defaults: {
@@ -17,7 +18,10 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
                 stylable: false,
                 'style-default': {},
                 'style': {},
-                'attributes': {}
+                styles: `.raw-default-height { height: 100px; }`,
+                'attributes': {
+                    class: 'raw-default-height'
+                }
             },
         },
         view: {
@@ -25,6 +29,12 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
             tagName: 'section',
             attributes: {
                 style: 'pointer-events: all;',
+            },
+            events: () => {
+                return {
+                    // dblclick means double click
+                    dblclick: 'onActive'
+                }
             },
 
             getMjmlTemplate() {
@@ -62,10 +72,18 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
                 return '*';
             },
 
+            // Triggered on component drop
+            onActive()
+            {
+                editor.trigger('modal:code-embed:open', this.model)
+            },
 
             init() {
                 coreMjmlView.init.call(this);
                 this.listenTo(this.model.get('components'), 'add remove', this.render);
+                this.listenTo(this.model, 'active', () => {
+                    editor.trigger('modal:code-embed:open', this.model)
+                })
             },
         },
     });
