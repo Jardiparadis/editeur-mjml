@@ -20,7 +20,11 @@ export default (editor: Editor, { opt, coreMjmlModel, coreMjmlView, sandboxEl }:
           // TODO
         },
         stylable: [
-          // TODO
+          'ico-align', 'ico-close', 'ico-color', 'ico-font-family', 'ico-font-size',
+          'ico-line-height', 'ico-text-decoration', 'ico-text-transform', 'ico-padding',
+          'ico-padding-top', 'ico-padding-bottom', 'ico-padding-left', 'ico-padding-right'
+
+          //TODO css-class, ico-open, ico-close
         ],
         traits: [
           {
@@ -28,8 +32,8 @@ export default (editor: Editor, { opt, coreMjmlModel, coreMjmlView, sandboxEl }:
             label: 'Hamburger',
             name: 'hamburger',
             options: [
-              { value: 'hamburger', name: 'ON' },
-              { value: '', name: 'OFF' },
+              { id: 'hamburger', label: 'ON'  },
+              { id : ''        , label: 'OFF' },
             ]
           }
         ],

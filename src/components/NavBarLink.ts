@@ -16,9 +16,10 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
         draggable: componentsToQuery(typeNavBar),
         highlightable: false,
         stylable: [
-          'font-style', 'font-size', 'font-weight', 'font-family', 'color',
-          'text-decoration', 'text-transform',
+          'color', 'font-family', 'font-size', 'font-style', 'font-weight',
           'padding', 'padding-top', 'padding-left', 'padding-right', 'padding-bottom',
+          'text-decoration', 'text-transform', 'letter-spacing', 'line-height'
+          //TODO css-class, rel
         ],
         'style-default': {
           'font-size': '13px',
@@ -28,7 +29,22 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
           'padding-right': '10px',
           'text-transform': 'uppercase',
         },
-        traits: ['href'],
+        traits: [
+          'href',
+          {
+            id: 'target',
+            type: 'select',
+            label: 'Target',
+            name: 'target',
+            default: '_blank',
+            options: [
+              { id: '_blank', label: 'Blank' },
+              { id: '_self', label: 'Self' },
+              { id: '_parent', label: 'Parent' },
+              { id: '_top', label: 'Top' },
+            ],
+          }
+        ],
       },
     },
 
