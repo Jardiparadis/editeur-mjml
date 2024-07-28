@@ -18,11 +18,15 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
         draggable: componentsToQuery([typeColumn, typeHero]),
         droppable: componentsToQuery(typeSocialElement),
         stylable: [
-          'icon-size', 'text-decoration', 'align', 'font-family', 'font-size', 'line-height',
+          'align', 'color', 'container-background-color',
+          'font-family', 'font-size', 'font-style', 'font-weight',
+          'icon-height', 'icon-size', 'icon-padding',
+          'line-height', 'text-padding', 'text-decoration',
+          'icon-padding', 'icon-padding-top', 'icon-padding-left', 'icon-padding-right', 'icon-padding-bottom',
+          'inner-padding', 'inner-padding-top', 'inner-padding-left', 'inner-padding-right', 'inner-padding-bottom',
           'padding', 'padding-top', 'padding-left', 'padding-right', 'padding-bottom',
           'border-radius', 'border-top-left-radius', 'border-top-right-radius', 'border-bottom-left-radius', 'border-bottom-right-radius',
-          'container-background-color',
-          'color',
+          //TODO css-class
         ],
         'style-default': {
           'align': 'center',
@@ -36,8 +40,8 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
             label: 'Mode',
             name: 'mode',
             options: [
-              { value: 'horizontal', name: 'Horizontal' },
-              { value: 'vertical', name: 'Vertical' },
+              { id: 'horizontal', label: 'Horizontal' },
+              { id: 'vertical'  , label: 'Vertical'   }
             ]
           }
         ],
