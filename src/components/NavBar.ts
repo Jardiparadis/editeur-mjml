@@ -28,13 +28,11 @@ export default (editor: Editor, { opt, coreMjmlModel, coreMjmlView, sandboxEl }:
         ],
         traits: [
           {
-            type: 'select',
+            type: 'checkbox',
             label: 'Hamburger',
             name: 'hamburger',
-            options: [
-              { id: 'hamburger', label: 'ON'  },
-              { id : ''        , label: 'OFF' },
-            ]
+            valueTrue: 'hamburger',
+            valueFalse: '',
           }
         ],
       },
