@@ -16,6 +16,23 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
                 name: getName(editor, 'wrapper'),
                 draggable: componentsToQuery(typeBody),
                 droppable: componentsToQuery(typeSection),
+                stylable: [
+                  'background-color', 'background-repeat', 'background-size', 'background-url',
+                  'background-position', 'background-position-x', 'background-position-y',
+                  'border', 'border-width', 'border-style', 'border-color', 'border-radius',
+                  'border-top', 'border-width-top', 'border-style-top', 'border-color-top',
+                  'border-bottom', 'border-width-bottom', 'border-style-bottom', 'border-color-bottom',
+                  'border-left', 'border-width-left', 'border-style-left', 'border-color-left',
+                  'border-right', 'border-width-right', 'border-style-right', 'border-color-right',
+                  'border-top-left-radius', 'border-top-right-radius', 'border-bottom-left-radius',
+                  'border-bottom-right-radius',
+                  'padding', 'padding-top', 'padding-left', 'padding-right', 'padding-bottom',
+                  'text-align'
+
+
+                  //TODO css-class
+                  //TODO background-position, x, y, repeat, size
+                ],
                 traits:[
                     'id',
                     'title',
@@ -25,8 +42,13 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
                         name: 'full-width',
                         valueTrue: 'full-width',
                         valueFalse: '',
-                    }
+                    },
+                    'background-url'
                 ],
+                styles: `.wrapper-default-height { height: 100px; }`,
+                'attributes': {
+                    class: 'wrapper-default-height'
+                }
             },
 
         },
