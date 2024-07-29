@@ -19,7 +19,7 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
           'color', 'font-family', 'font-size', 'font-style', 'font-weight',
           'padding', 'padding-top', 'padding-left', 'padding-right', 'padding-bottom',
           'text-decoration', 'text-transform', 'letter-spacing', 'line-height'
-          //TODO css-class, rel
+          //TODO rel
         ],
         'style-default': {
           'font-size': '13px',
@@ -43,7 +43,8 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
               { id: '_parent', label: 'Parent' },
               { id: '_top', label: 'Top' },
             ],
-          }
+          },
+          'css-class'
         ],
       },
     },

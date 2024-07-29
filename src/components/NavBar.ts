@@ -24,7 +24,7 @@ export default (editor: Editor, { opt, coreMjmlModel, coreMjmlView, sandboxEl }:
           'ico-line-height', 'ico-text-decoration', 'ico-text-transform', 'ico-padding',
           'ico-padding-top', 'ico-padding-bottom', 'ico-padding-left', 'ico-padding-right'
 
-          //TODO css-class, ico-open, ico-close
+          //TODO ico-open, ico-close
         ],
         traits: [
           {
@@ -33,7 +33,8 @@ export default (editor: Editor, { opt, coreMjmlModel, coreMjmlView, sandboxEl }:
             name: 'hamburger',
             valueTrue: 'hamburger',
             valueFalse: '',
-          }
+          },
+          'css-class'
         ],
       },
     },

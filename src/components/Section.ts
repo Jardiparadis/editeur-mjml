@@ -41,7 +41,8 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
             name: 'full-width',
             valueTrue: 'full-width',
             valueFalse: '',
-         }
+         },
+          'css-class'
         ],
       },
     },

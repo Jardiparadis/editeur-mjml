@@ -54,7 +54,8 @@ export default (editor:  Editor, { coreMjmlModel, coreMjmlView }: any) => {
               { id: '_parent', label: 'Parent' },
               { id: '_top', label: 'Top' },
             ],
-          }
+          },
+          'css-class',
         ],
         // 'container-background-color', 'inner-padding'
       },

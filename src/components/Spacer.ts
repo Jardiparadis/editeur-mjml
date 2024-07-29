@@ -21,6 +21,9 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
           'height', 'container-background-color',
           'padding', 'padding-top', 'padding-left', 'padding-right', 'padding-bottom',
         ],
+        traits: [
+          'css-class'
+        ],
         void: false,
       },
     },

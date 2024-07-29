@@ -30,6 +30,9 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
           'width', 'container-background-color', 'align',
           'border-detached', 'border-width', 'border-style', 'border-color'
         ],
+        traits: [
+          'css-class'
+        ],
         void: false,
       },
     },

@@ -71,7 +71,8 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
               { id: '_top', label: 'Top' },
             ],
           },
-          { name: 'title' }
+          { name: 'title' },
+          'css-class',
         ],
       },
     },

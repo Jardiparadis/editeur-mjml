@@ -43,7 +43,8 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
               { id: 'horizontal', label: 'Horizontal' },
               { id: 'vertical'  , label: 'Vertical'   }
             ]
-          }
+          },
+          'css-class'
         ],
       },
     },

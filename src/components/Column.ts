@@ -32,6 +32,9 @@ export default (editor: Editor, { opt, coreMjmlModel, coreMjmlView, sandboxEl }:
           'border-bottom-left-inner-radius', 'border-bottom-right-inner-radius',
           'padding', 'padding-top', 'padding-left', 'padding-right', 'padding-bottom',
         ],
+        traits: [
+          'css-class'
+        ],
         'style-default': {
           'vertical-align': 'top'
         }

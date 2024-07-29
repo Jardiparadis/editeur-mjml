@@ -18,6 +18,9 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
         stylable: [
           'width', 'vertical-align', 'background-color', 'direction',
         ],
+        traits: [
+          'css-class'
+        ],
         'style-default': {
           'vertical-align': 'top'
         }

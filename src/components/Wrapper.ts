@@ -28,9 +28,6 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
                   'border-bottom-right-radius',
                   'padding', 'padding-top', 'padding-left', 'padding-right', 'padding-bottom',
                   'text-align'
-
-
-                  //TODO css-class
                   //TODO background-position, x, y, repeat, size
                 ],
                 traits:[
@@ -43,7 +40,8 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
                         valueTrue: 'full-width',
                         valueFalse: '',
                     },
-                    'background-url'
+                    'background-url',
+                    'css-class'
                 ],
                 styles: `.wrapper-default-height { height: 100px; }`,
                 'attributes': {

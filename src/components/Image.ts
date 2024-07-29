@@ -48,7 +48,8 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
             name: 'fluid-on-mobile',
             valueTrue: 'true', //TODO should be boolean but follows the rules in Editeur:Checkbox.vue l6
             valueFalse: 'false',
-          }
+          },
+          'css-class'
         ],
         void: false,
       },
