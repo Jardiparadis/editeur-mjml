@@ -20,11 +20,10 @@ export default (editor: Editor, { opt, coreMjmlModel, coreMjmlView, sandboxEl }:
           // TODO
         },
         stylable: [
-          'ico-align', 'ico-close', 'ico-color', 'ico-font-family', 'ico-font-size',
+          'ico-align', 'ico-color', 'ico-font-family', 'ico-font-size',
           'ico-line-height', 'ico-text-decoration', 'ico-text-transform', 'ico-padding',
-          'ico-padding-top', 'ico-padding-bottom', 'ico-padding-left', 'ico-padding-right'
-
-          //TODO ico-open, ico-close
+          'ico-padding-top', 'ico-padding-bottom', 'ico-padding-left', 'ico-padding-right',
+          'ico-open', 'ico-close'
         ],
         traits: [
           {
