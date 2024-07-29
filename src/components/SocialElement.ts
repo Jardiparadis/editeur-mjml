@@ -15,12 +15,14 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
         name: getName(editor, 'socialElement'),
         draggable: componentsToQuery(typeSocial),
         stylable: [
-          'icon-size', 'text-decoration', 'align', 'font-family', 'font-size', 'line-height',
-          'padding', 'padding-top', 'padding-left', 'padding-right', 'padding-bottom',
+          'align', 'background-color', 'color',
           'border-radius', 'border-top-left-radius', 'border-top-right-radius', 'border-bottom-left-radius', 'border-bottom-right-radius',
-          'background-color',
-          'color',
-          'vertical-align',
+          'font-family', 'font-size', 'font-style', 'font-weight',
+          'icon-height', 'icon-size', 'line-height',
+          'padding', 'padding-top', 'padding-left', 'padding-right', 'padding-bottom',
+          'text-decoration', 'vertical-align',
+          //TODO text-padding, sizes, srcset
+          //TODO css-class, rel
         ],
         'style-default': {
           'align': 'center',
@@ -53,8 +55,23 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
               { value: 'xing', name: 'Xing' },
             ]
           },
-          { name: 'src' },
+          { name: 'src'  },
           { name: 'href' },
+          { name: 'alt'  },
+          {
+            id: 'target',
+            type: 'select',
+            label: 'Target',
+            name: 'target',
+            default: '_blank',
+            options: [
+              { id: '_blank', label: 'Blank' },
+              { id: '_self', label: 'Self' },
+              { id: '_parent', label: 'Parent' },
+              { id: '_top', label: 'Top' },
+            ],
+          },
+          { name: 'title' }
         ],
       },
     },
