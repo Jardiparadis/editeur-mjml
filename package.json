@@ -1,7 +1,7 @@
 {
-  "name": "grapesjs-mjml",
+  "name": "editeur-grapesjs-mjml",
   "version": "1.0.5",
-  "description": "MJML Componenets integration in GrapesJS",
+  "description": "MJML Components integration in GrapesJS",
   "main": "dist/index.js",
   "scripts": {
     "lint": "eslint src",
