@@ -20,6 +20,10 @@ import loadNavBar from './NavBar';
 import loadNavBarLink from './NavBarLink';
 import loadHero from './Hero';
 import loadRaw from './Raw';
+import loadAccordion from './Accordion';
+import loadAccordionElement from './AccordionElement';
+import loadAccordionTitle from './AccordionElementTitle';
+import loadAccordionText from './AccordionText';
 import { RequiredPluginOptions } from '..';
 
 export default (editor: Editor, opt: RequiredPluginOptions) => {
@@ -211,6 +215,11 @@ export default (editor: Editor, opt: RequiredPluginOptions) => {
       let end = html.indexOf('</body>');
       html = html.substring(start, end).trim();
       sandboxEl.innerHTML = html;
+
+      //console.log("==>", html)
+
+      //console.log('&&&>', this.getTemplateFromEl(sandboxEl))
+
       return this.getTemplateFromEl(sandboxEl);
     },
 
@@ -259,6 +268,7 @@ export default (editor: Editor, opt: RequiredPluginOptions) => {
       this.renderAttributes();
       this.el.innerHTML = this.getTemplateFromMjml();
       this.renderChildren(appendChildren);
+      //console.log("==>", this.getChildrenContainer().childNodes)
       this.childNodes = this.getChildrenContainer().childNodes;
       this.renderStyle();
 
@@ -302,7 +312,11 @@ export default (editor: Editor, opt: RequiredPluginOptions) => {
     loadNavBar,
     loadNavBarLink,
     loadHero,
-    loadRaw
+    loadRaw,
+    loadAccordion,
+    loadAccordionElement,
+    loadAccordionTitle,
+    loadAccordionText
   ]
   .forEach(module => module(editor, compOpts));
 };

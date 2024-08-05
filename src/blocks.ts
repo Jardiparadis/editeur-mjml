@@ -201,4 +201,23 @@ export default (editor: Editor, opts: RequiredPluginOptions) => {
     activate: true
   });
 
+  addBlock('mj-accordion', {
+    label: getI18nLabel('accordion'),
+    media: `<svg viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12,17.56L16.07,16.43L16.62,10.33H9.38L9.2,8.3H16.8L17,6.31H7L7.56,12.32H14.45L14.22,14.9L12,15.5L9.78,14.9L9.64,13.24H7.64L7.93,16.43L12,17.56M4.07,3H19.93L18.5,19.2L12,21L5.5,19.2L4.07,3Z" />
+    </svg>`,
+    content: `<mj-accordion></mj-accordion>`,
+    activate: true
+  });
+
+  addBlock('mj-accordion-element', {
+    label: getI18nLabel('accordion-element'),
+    media: `<svg viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12,17.56L16.07,16.43L16.62,10.33H9.38L9.2,8.3H16.8L17,6.31H7L7.56,12.32H14.45L14.22,14.9L12,15.5L9.78,14.9L9.64,13.24H7.64L7.93,16.43L12,17.56M4.07,3H19.93L18.5,19.2L12,21L5.5,19.2L4.07,3Z" />
+    </svg>`,
+    content: `<mj-accordion-element><mj-accordion-title>Why use an accordion?</mj-accordion-title> <mj-accordion-text>
+                Content is stacked into tabs and users can expand them at will. If responsive styles are not supported (mostly on desktop clients), tabs are then expanded and your content is readable at once.
+            </mj-accordion-text></mj-accordion-element>`,
+    activate: true
+  });
 };
