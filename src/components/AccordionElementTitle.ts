@@ -14,7 +14,7 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
             ...coreMjmlModel,
             defaults: {
                 name: getName(editor, 'accordionTitle'),
-                draggable: componentsToQuery(typeAccordion),
+                draggable: false,
                 stylable: [],
                 'style-default': {},
                 traits: [],
