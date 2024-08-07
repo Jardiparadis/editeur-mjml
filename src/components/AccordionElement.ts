@@ -34,14 +34,10 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
             },
 
             getTemplateFromEl(sandboxEl: any) {
-                console.log(sandboxEl.innerHTML)
-                console.log(sandboxEl.querySelector('tr > td > table > tbody > tr').innerHTML)
                 return sandboxEl.querySelector('tr > td > table > tbody > tr').innerHTML;
             },
 
             getChildrenSelector() {
-                console.log(this.el.innerHTML)
-                console.log(this.el.querySelector('div'))
                 return 'div';
             }
         },

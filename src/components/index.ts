@@ -1,4 +1,4 @@
-import type { Editor } from 'grapesjs';
+import type { Component, Editor } from 'grapesjs';
 import { mjmlConvert, debounce } from './utils';
 import loadMjml from './mjml';
 import loadHead from './Head';
@@ -216,10 +216,6 @@ export default (editor: Editor, opt: RequiredPluginOptions) => {
       html = html.substring(start, end).trim();
       sandboxEl.innerHTML = html;
 
-      //console.log("==>", html)
-
-      //console.log('&&&>', this.getTemplateFromEl(sandboxEl))
-
       return this.getTemplateFromEl(sandboxEl);
     },
 
@@ -268,7 +264,6 @@ export default (editor: Editor, opt: RequiredPluginOptions) => {
       this.renderAttributes();
       this.el.innerHTML = this.getTemplateFromMjml();
       this.renderChildren(appendChildren);
-      //console.log("==>", this.getChildrenContainer().childNodes)
       this.childNodes = this.getChildrenContainer().childNodes;
       this.renderStyle();
 
@@ -319,4 +314,20 @@ export default (editor: Editor, opt: RequiredPluginOptions) => {
     loadAccordionText
   ]
   .forEach(module => module(editor, compOpts));
+
+  function rerenderChildrenView (component: Component, deep: boolean) {
+    for (let i = 0; i < component.components().length; i++) {
+      component.getChildAt(i).getView()?.render()
+
+      if (deep) {
+        rerenderChildrenView(component.getChildAt(i), deep)
+      }
+    }
+  }
+
+  editor.on('component:styleUpdate', (cmp: Component) => {
+    if (cmp.isInstanceOf('mj-accordion-element')) {
+      rerenderChildrenView(cmp, true)
+    }
+  })
 };

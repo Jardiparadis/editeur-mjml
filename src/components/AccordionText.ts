@@ -38,8 +38,6 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
             },
 
             getTemplateFromEl(sandboxEl: any) {
-                console.log(sandboxEl.innerHTML)
-                console.log(sandboxEl.querySelector('.mj-accordion-content').innerHTML)
                 return sandboxEl.querySelector('.mj-accordion-content').innerHTML;
             },
 
