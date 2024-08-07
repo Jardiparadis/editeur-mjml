@@ -30,6 +30,7 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
             attributes: {},
 
             getMjmlTemplate() {
+                console.log("title")
                 return {
                     start: `<mjml><mj-body><mj-column><mj-accordion><mj-accordion-element>`,
                     end: `</mj-accordion-element></mj-accordion></mj-column></mj-body></mjml>`,
@@ -43,6 +44,7 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
             },
 
             getChildrenSelector() {
+                console.log("title selector")
                 return 'td';
             }
         },
