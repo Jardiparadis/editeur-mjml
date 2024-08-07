@@ -326,7 +326,7 @@ export default (editor: Editor, opt: RequiredPluginOptions) => {
   }
 
   editor.on('component:styleUpdate', (cmp: Component) => {
-    if (cmp.isInstanceOf('mj-accordion-element')) {
+    if (cmp.isInstanceOf('mj-accordion-element') || cmp.isInstanceOf('mj-accordion')) {
       rerenderChildrenView(cmp, true)
     }
   })

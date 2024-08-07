@@ -14,9 +14,19 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
             defaults: {
                 name: getName(editor, 'accordionElement'),
                 draggable: componentsToQuery(typeAccordion),
-                stylable: ['icon-height'],
+                stylable: [
+                    'background-color', 'font-family',
+                    'icon-align', 'icon-height', 'icon-position', 'icon-width',
+                    'border', 'border', 'border-width', 'border-style', 'border-color',
+                ],
                 'style-default': {},
-                traits: [],
+                traits: [
+                    'css-class',
+                    'icon-unwrapped-alt',
+                    'icon-unwrapped-url',
+                    'icon-wrapped-alt',
+                    'icon-wrapped-url'
+                ],
             },
         },
 

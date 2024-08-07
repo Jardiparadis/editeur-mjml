@@ -28,7 +28,9 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
                 traits: [
                     'css-class',
                     'icon-unwrapped-alt',
-                    'icon-unwrapped-url'
+                    'icon-unwrapped-url',
+                    'icon-wrapped-alt',
+                    'icon-wrapped-url'
                 ],
                 //Add accordion CSS manually to allow sandbox to simulate its behavior
                 styles: `
