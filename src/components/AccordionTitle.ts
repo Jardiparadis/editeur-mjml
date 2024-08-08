@@ -1,7 +1,7 @@
 // Specs: https://documentation.mjml.io/#mjml-social
 import type { Editor } from 'grapesjs';
 import { componentsToQuery, getName, isComponentType } from './utils';
-import { type as typeAccordion } from './Accordion';
+import { type as typeAccordion } from './AccordionElement';
 
 export const type = 'mj-accordion-title';
 
@@ -14,12 +14,18 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
             ...coreMjmlModel,
             defaults: {
                 name: getName(editor, 'accordionTitle'),
-                draggable: false,
-                stylable: [],
+                draggable: componentsToQuery(typeAccordion),
+                stylable: [
+                    'background-color', 'color',
+                    'font-family', 'font-size',
+                    'padding', 'padding-bottom', 'padding-left', 'padding-right', 'padding-top'
+                ],
                 'style-default': {},
-                traits: [],
+                traits: [
+                    'css-class'
+                ],
                 attributes: {
-                    class: 'mj-accordion-title'
+
                 }
             },
         },
@@ -40,7 +46,6 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
                 };
               }
 
-
               return {
                 start: `<mjml><mj-body><mj-column>${accordionTag.start}${accordionElementTag.start}`,
                 end: `${accordionElementTag.end}${accordionTag.end}</mj-column></mj-body></mjml>`,
@@ -48,9 +53,13 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
             },
 
             getTemplateFromEl(sandboxEl: any) {
-                // console.log(sandboxEl.innerHTML)
+                //console.log(sandboxEl.innerHTML)
                 // console.log(sandboxEl.querySelector('.mj-accordion-title').innerHTML)
-                return sandboxEl.querySelector('.mj-accordion-title').innerHTML;
+                // Set class here instead of model.default.attributes to avoid grapesjs putting css in defined class
+                let element = document.createElement('div');
+                element.className = 'mj-accordion-title'
+                element.appendChild(sandboxEl.querySelector('.mj-accordion-title'))
+                return element.innerHTML;
             },
 
             getChildrenSelector() {

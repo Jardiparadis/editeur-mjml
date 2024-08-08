@@ -22,7 +22,7 @@ import loadHero from './Hero';
 import loadRaw from './Raw';
 import loadAccordion from './Accordion';
 import loadAccordionElement from './AccordionElement';
-import loadAccordionTitle from './AccordionElementTitle';
+import loadAccordionTitle from './AccordionTitle';
 import loadAccordionText from './AccordionText';
 import { RequiredPluginOptions } from '..';
 

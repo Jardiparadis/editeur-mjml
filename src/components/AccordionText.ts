@@ -1,7 +1,7 @@
 // Specs: https://documentation.mjml.io/#mjml-social
 import type { Editor } from 'grapesjs';
 import { componentsToQuery, getName, isComponentType } from './utils';
-import { type as typeAccordion } from './Accordion';
+import { type as typeAccordion } from './AccordionElement';
 
 export const type = 'mj-accordion-text';
 
@@ -14,12 +14,19 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
             ...coreMjmlModel,
             defaults: {
                 name: getName(editor, 'accordionText'),
-                draggable: false,
-                stylable: [],
+                draggable: componentsToQuery(typeAccordion),
+                stylable: [
+                    'background-color', 'color',
+                    'font-family', 'font-size', 'font-weight',
+                    'letter-spacing', 'line-height',
+                    'padding', 'padding-bottom', 'padding-left', 'padding-right', 'padding-top',
+                ],
                 'style-default': {},
-                traits: [],
+                traits: [
+                    'css-class'
+                ],
                 attributes: {
-                    class: 'mj-accordion-content'
+
                 }
             },
         },
@@ -38,7 +45,12 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
             },
 
             getTemplateFromEl(sandboxEl: any) {
-                return sandboxEl.querySelector('.mj-accordion-content').innerHTML;
+                // Set class here instead of model.default.attributes to avoid grapesjs putting css in defined class
+                let element = document.createElement('div');
+                element.className = 'mj-accordion-content'
+                element.appendChild(sandboxEl.querySelector('.mj-accordion-content'))
+                return element.innerHTML;
+                //return sandboxEl.querySelector('.mj-accordion-content').innerHTML;
             },
 
             getChildrenSelector() {

@@ -44,7 +44,10 @@ export default {
         wrapper: 'Wrapper',
         raw: 'Raw',
         carousel: 'Carousel',
-        accordion: 'Accordion'
+        accordion: 'Accordion',
+        accordionElement: 'Accordion element',
+        accordionTitle: 'Accordion title',
+        accordionText: 'Accordion text'
       },
     }
   },
