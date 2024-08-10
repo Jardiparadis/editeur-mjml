@@ -46,7 +46,7 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
             type: 'checkbox',
             label: 'Fluid on mobile',
             name: 'fluid-on-mobile',
-            valueTrue: 'true', //TODO should be boolean but follows the rules in Editeur:Checkbox.vue l6
+            valueTrue: 'true', //TODO should be boolean but follows the rules in Editeur:Checkbox.vue line 6
             valueFalse: 'false',
           },
           'css-class'
