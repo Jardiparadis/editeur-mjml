@@ -24,6 +24,8 @@ import loadAccordion from './Accordion';
 import loadAccordionElement from './AccordionElement';
 import loadAccordionTitle from './AccordionTitle';
 import loadAccordionText from './AccordionText';
+import loadCarousel from './Carousel';
+import loadCarouselImage from './Carouselmage';
 import { RequiredPluginOptions } from '..';
 
 export default (editor: Editor, opt: RequiredPluginOptions) => {
@@ -311,7 +313,9 @@ export default (editor: Editor, opt: RequiredPluginOptions) => {
     loadAccordion,
     loadAccordionElement,
     loadAccordionTitle,
-    loadAccordionText
+    loadAccordionText,
+    //loadCarousel,
+    //loadCarouselImage
   ]
   .forEach(module => module(editor, compOpts));
 
