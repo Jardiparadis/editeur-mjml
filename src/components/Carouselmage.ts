@@ -14,28 +14,32 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
         model: {
             ...coreMjmlModel,
             defaults: {
-                name: getName(editor, 'carousel'),
+                name: getName(editor, 'carouselImage'),
                 draggable: componentsToQuery(typeCarousel),
             },
         },
 
         view: {
             ...coreMjmlView,
-            tagName: 'div',
+            tagName: 'a',
             attributes: {
                 style: '',
             },
 
             getMjmlTemplate() {
-                console.log("########## CAROUSEL ITEM ############")
                 return {
                     start: `<mjml><mj-body><mj-column><mj-carousel>`,
                     end: `</mj-carousel></mj-column></mj-body></mjml>`,
                 };
             },
 
+            getTemplateFromEl(sandboxEl: any) {
+                console.log(sandboxEl.querySelector('a').innerHTML)
+                return sandboxEl.querySelector('a').innerHTML;
+            },
+
             getChildrenSelector() {
-                return 'input';
+                return 'img';
             },
         }
     });
